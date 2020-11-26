@@ -3,11 +3,10 @@ import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
 import { FormsModule } from '@angular/forms'
-import { CommonModule } from '@angular/common'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
