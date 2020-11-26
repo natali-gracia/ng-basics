@@ -1,12 +1,10 @@
 <div class="container">
   <h1>Angular Pipes</h1>
-  <p>{{ e | number: '1.1-2' }}</p>
-  <p>{{ str | titlecase | slice: 1:-2 }}</p>
-  <p>{{ date | date: 'MMMM dd, yyy, HH:mm:ss' }}</p>
-  <p>{{ float }}</p>
-  <p>{{ float | currency }}</p>
-  <p>{{ float | percent: '2.0-0' }}</p>
-  <pre>{{ obj.b.d.e | json }}</pre>
-
-  <p>{{ 'Hello   world  ' | exMarks }}</p>
+  <button class="btn" (click)="searchField = 'title'">Title</button>
+  <button class="btn" (click)="searchField = 'text'">Text</button>
+  <input type="text" [(ngModel)]="search" />
+  <div class="card" *ngFor="let post of posts | filter: search:searchField">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.text }}</p>
+  </div>
 </div>

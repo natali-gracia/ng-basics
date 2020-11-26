@@ -1,23 +1,21 @@
 import { Component } from '@angular/core'
 
+export interface Post {
+  title: string
+  text: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  e: number = Math.E
-  str: string = 'Hello world!'
-  date: Date = new Date()
-  float = 0.42
-  obj = {
-    a: 1,
-    b: {
-      c: 2,
-      d: {
-        f: 3,
-        e: 4,
-      },
-    },
-  }
+  search = ''
+  searchField = 'title'
+  posts: Post[] = [
+    { title: 'Beer', text: 'Best beer ever!' },
+    { title: 'Bread', text: 'The worth bread in the world!' },
+    { title: 'Angular', text: 'The most interesting framework ever!' },
+  ]
 }
