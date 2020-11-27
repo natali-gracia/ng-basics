@@ -18,4 +18,10 @@ export class AppComponent {
     { title: 'Bread', text: 'The worth bread in the world!' },
     { title: 'Angular', text: 'The most interesting framework ever!' },
   ]
+  addPost() {
+    this.posts.unshift({
+      title: 'Angular EDU',
+      text: 'Angular course'
+    })
+  }
 }
